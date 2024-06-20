@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Stamp Rally</title>
+    <link rel="stylesheet" href="file:///E|/3年/スペースインタラクション/html/css/styles.css">
+    <script src="https://unpkg.com/html5-qrcode@latest/minified/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <div id="homeScreen" class="screen active">
+        <h1>Welcome to the QR Code Stamp Rally</h1>
+        <button id="startButton">Start QR Code Scan</button>
+    </div>
+    <div id="qrScanScreen" class="screen hidden">
+        <h1>Scan QR Code</h1>
+        <div id="reader" style="width: 300px; height: 300px;"></div>
+        <button id="backToHomeButton">Back to Home</button>
+    </div>
+    <div id="stampScreen" class="screen hidden">
+        <h1>You've got a new stamp!</h1>
+        <div id="stampContainer"></div>
+        <button id="backToHomeButtonFromStamp">Back to Home</button>
+    </div>
+    <script src="file:///E|/3年/スペースインタラクション/html/js/script.js"></script>
+</body>
+</html>
