@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタンプラリー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+        <h1>🐟 おさかなびとを探そう！ 🐟</h1>
+        <p>街の中に隠れた8匹の「おさかなびと」を探してみよう！</p>
+    </header>
+    <div class="container">
+        <!-- 画像をクリックするとオーバーレイが表示される -->
+        <div class="stamp-container" style="left: 10%; top: 20%;" onclick="showOverlay(0, '海にすむ生き物だよ！', 'さかな', this)">
+            <img src="img/sakana1.png" class="image" alt="海にすむ生き物">
+        </div>
+        <div class="stamp-container" style="left: 60%; top: 5;" onclick="showOverlay(1, '波があるところにいるよ！', 'うみ', this)">
+            <img src="img/sakana2.png" class="image" alt="波があるところにいる生き物">
+        </div>
+        <div class="stamp-container" style="left: 70%; top: 30%;" onclick="showOverlay(2, 'ちょっとこわい海のハンター！', 'さめ', this)">
+            <img src="img/sakana3.png" class="image" alt="海のハンター">
+        </div>
+        <div class="stamp-container" style="left: 20%; top: 60%;" onclick="showOverlay(3, '大きな魚だよ！', 'まぐろ', this)">
+            <img src="img/sakana4.png" class="image" alt="大きな魚">
+        </div>
+        <div class="stamp-container" style="left: 5%; top: 50%;" onclick="showOverlay(4, 'かわいい小さな魚！', 'にしき', this)">
+            <img src="img/sakana5.png" class="image" alt="かわいい小さな魚">
+        </div>
+        <div class="stamp-container" style="left: 70%; top: 50%;" onclick="showOverlay(5, '海底にいる生き物だよ！', 'かに', this)">
+            <img src="img/sakana6.png" class="image" alt="海底にいる生き物">
+        </div>
+        <div class="stamp-container" style="left: 30%; top: 10%;" onclick="showOverlay(6, '海の中でよく見る魚！', 'さば', this)">
+            <img src="img/sakana7.png" class="image" alt="海の中でよく見る魚">
+        </div>
+        <div class="stamp-container" style="left: 40%; top: 40%;" onclick="showOverlay(7, '深海に住んでいるよ！', 'ぎょ', this)">
+            <img src="img/sakana8.png" class="image" alt="深海に住んでいる魚">
+        </div>
+    </div>
+
+    <!-- オーバーレイ画面 -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p id="hintText"></p>
+            <input type="text" id="keywordInput" placeholder="キーワードを入力">
+            <button onclick="checkAnswer()">OK</button>
+            <button onclick="closeOverlay()">閉じる</button>
+            <p id="resultText" class="result-message" 
+                data-correct="正解！スタンプゲット！" 
+                data-incorrect="違うよ！もう一回試してみよう！">
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
