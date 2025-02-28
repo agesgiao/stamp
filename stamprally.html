@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタンプラリー</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+	<header>
+        <h1>🐟 おさかなびとを探そう！ 🐟</h1>
+        <p>街の中に隠れた8匹の「おさかなびと」を探し、キーワードを“ひらがな”で入力しよう！</p>
+    </header>
+    <div class="container">
+    <div class="stamp-container" onclick="showOverlay(0, 'おみせには かわいた たべものが いっぱい！おさかなびとも ひからびちゃう？', 'かわいたさかな', this)">
+        <img src="img/sakana1.png" class="image" alt="海にすむ生き物">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(1, 'まちを きれいに するための おしらせがあるよ！おさかなびとも『ポイすては　ダメ！』っていってるよ！', 'きれいなうみ', this)">
+        <img src="img/sakana2.png" class="image" alt="波があるところにいる生き物">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(2, 'おいしい かおりがするよ！おさかなびとは だしのひみつをしっている？', 'おだしのちから', this)">
+        <img src="img/sakana3.png" class="image" alt="海のハンター">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(3, 'コーヒーのいい においがただよう ほっとするばしょ！おさかなびとも ひとやすみ？', 'ほっとなさかな', this)">
+        <img src="img/sakana4.png" class="image" alt="大きな魚">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(4, 'まちのたからを まもるばしょ！おさかなびとは ちょきんしてる？', 'おたからのうみ', this)">
+        <img src="img/sakana5.png" class="image" alt="かわいい小さな魚">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(5, 'ラケットがいっぱい！おさかなびとも スマッシュのれんしゅうちゅう？', 'さかなすまっしゅ', this)">
+        <img src="img/sakana6.png" class="image" alt="海底にいる生き物">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(6, 'おとなが よろこぶ のみものがいっぱい！のみすぎには　ようちゅうい！', 'さけとさかな', this)">
+        <img src="img/sakana7.png" class="image" alt="海の中でよく見る魚">
+    </div>
+    <div class="stamp-container" onclick="showOverlay(7, 'みんながあつまる ひろばのそば！おさかなびとも おはなしちゅう？', 'おさかなひろば', this)">
+        <img src="img/sakana8.png" class="image" alt="深海に住んでいる魚">
+    </div>
+</div>
+
+    <!-- オーバーレイ画面 -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p id="hintText"></p>
+            <input type="text" id="keywordInput" placeholder="キーワードを入力">
+            <button onclick="checkAnswer()">OK</button>
+            <button onclick="closeOverlay()">閉じる</button>
+            <p id="resultText" class="result-message" 
+                data-correct="正解！スタンプゲット！" 
+                data-incorrect="違うよ！もう一回試してみよう！">
+            </p>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

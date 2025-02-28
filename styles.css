@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #87cefa;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+	gap:20px;
+    justify-content: center;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40px;
+    height: 30px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+}
+
+.close-icon {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1002;
+    display: none;
+}
+
+.show {
+    right: 0;
+}
+
+.menu-open .hamburger {
+    display: none;
+}
+
+.menu-open .close-icon {
+    display: block;
+}
+
+header {
+    background-color: #87cefa;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    position: fixed; /* ヘッダーを固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 他の要素より上に表示 */
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-size: 2em;
+	
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.background {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.background img {
+	width: 100%;
+	hight: auto;
+}
+
+main {
+    padding: 20px;
+	max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+	
+}
+
+.intro {
+    padding: 20px;
+    margin-bottom: 20px;
+	
+}
+
+.animation1 {
+	position: absolute;
+	left: 10%;
+}
+
+.animation1 img {
+	width: 100px;
+    height: auto;
+}
+
+.events {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+	margin-top: 150px;
+}
+
+.events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.events li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.animation2 {
+	position: absolute;
+	right: 10%;
+}
+
+.animation2 img {
+	width: 100px;
+    height: auto;
+}
+
+
+.info {
+    padding: 20px;
+    border-radius: 10px;
+	margin-top: 150px;
+}
+
+.banner {
+    text-align: center; /* 画像を中央配置 */
+	margin-top: 150px;
+}
+
+.banner img {
+    width: 90%; /* 画面幅に対して90%の大きさ */
+    max-width: 1200px; /* 最大幅を設定 */
+    height: auto; /* 縦横比を維持 */
+    transition: transform 0.2s ease-in-out; /* マウスオーバー時のアニメーション */
+}
+
+.banner img:hover {
+    transform: scale(1.05); /* マウスを乗せると少し拡大 */
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+/* スライドショー全体のスタイル */
+.slideshow {
+    width: 100%;
+    overflow: hidden;
+    background-color: #87cefa; /* 背景色 */
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+	margin-top: 150px;
+}
+
+/* スライドショーの表示領域 */
+.slideshow-wrapper {
+    width: 100%;
+    max-width: 1200px; /* 最大幅を設定 */
+    overflow: hidden;
+    position: relative;
+}
+
+/* スライドを並べるコンテナ */
+.slideshow-container {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: infiniteSlide 20s linear infinite; /* 15秒で無限ループ */
+}
+
+/* 画像のスタイル */
+.slideshow-container img {
+    width: 200px; /* 画像サイズ */
+    height: auto;
+}
+
+/* 無限ループのアニメーション */
+@keyframes infiniteSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* マウスオーバーでアニメーション停止 */
+.slideshow-container:hover {
+    animation-play-state: paused;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+.setumei{
+	padding: 20px;
+    border-radius: 10px;
+}
+
+.setumei h1{
+	font-size: 2em;
+}
+
+.setumei p{
+	font-size: 1.2em;
+	margin-top: 150px;
+}
+
+.rule{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.rule img{
+	width: 200px;
+	hight: auto;
+}
+
+.banner2 {
+    text-align: center; /* 画像を中央配置 */
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+
+.banner2 img {
+    width: 90%; /* 画面幅に対して90%の大きさ */
+    max-width: 1200px; /* 最大幅を設定 */
+    height: auto; /* 縦横比を維持 */
+    transition: transform 0.2s ease-in-out; /* マウスオーバー時のアニメーション */
+}
+
+.banner2 img:hover {
+    transform: scale(1.05); /* マウスを乗せると少し拡大 */
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+footer {
+    background: #87cefa;
+    color: #fff;
+    text-align: center;
+    padding: 7% 0;
+}
