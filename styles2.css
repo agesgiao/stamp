@@ -91,3 +91,42 @@ p {
     border-radius: 5px;
 }
 
+
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 20px;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* スマホでは2列に変更 */
+        gap: 10px;
+        width: 90%;
+    }
+
+    .image {
+        width: 80px; /* スマホでは少し小さく */
+    }
+
+    .overlay-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .overlay-content input {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .overlay-content button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
