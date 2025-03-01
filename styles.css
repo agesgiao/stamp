@@ -60,6 +60,8 @@ main {
 .banner, .banner2 {
     text-align: center;
     margin-top: 80px;
+　　border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
 }
 
 .banner img, .banner2 img {
@@ -67,6 +69,8 @@ main {
     max-width: 1200px;
     height: auto;
     transition: transform 0.2s ease-in-out;
+　　border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
 }
 
 .banner img:hover, .banner2 img:hover {
@@ -183,6 +187,7 @@ footer {
     
     .banner img, .banner2 img {
         width: 100%;
+	border-radius: 10px 10px 10px 10px;
     }
 	
 	.banner2{
