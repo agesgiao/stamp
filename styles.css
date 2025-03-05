@@ -34,6 +34,7 @@ main {
 .animation1 {
 	position: absolute;
 	left: 10%;
+	margin-bottom: 20px;
 }
 
 .animation1 img {
